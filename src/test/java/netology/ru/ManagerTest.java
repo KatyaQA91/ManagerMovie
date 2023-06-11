@@ -74,6 +74,57 @@ public class ManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void reverseListOfSixMovies() {
+        Manager manager = new Manager();
+
+        manager.add("Film 1");
+        manager.add("Film 2");
+        manager.add("Film 3");
+        manager.add("Film 4");
+        manager.add("Film 5");
+        manager.add("Film 6");
+
+        String[] expected = {"Film 6", "Film 5", "Film 4", "Film 3", "Film 2"};
+        String[] actual = manager.findLast();
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void addingInListOfFiveMovies() {  //добавление в список фильмов 5
+        Manager manager = new Manager();
+
+        manager.add("Film 1");
+        manager.add("Film 2");
+        manager.add("Film 3");
+        manager.add("Film 4");
+        manager.add("Film 5");
+
+
+        String[] expected = {"Film 1", "Film 2", "Film 3", "Film 4", "Film 5",};
+        String[] actual = manager.findAll();
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void addingInListOfSixMovies() {  //добавление в список фильмов 6
+        Manager manager = new Manager();
+
+        manager.add("Film 1");
+        manager.add("Film 2");
+        manager.add("Film 3");
+        manager.add("Film 4");
+        manager.add("Film 5");
+        manager.add("Film 6");
+
+
+        String[] expected = {"Film 1", "Film 2", "Film 3", "Film 4", "Film 5", "Film 6"};
+        String[] actual = manager.findAll();
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
 }
+
+
 
 
